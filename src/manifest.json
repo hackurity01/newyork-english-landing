@@ -1,0 +1,31 @@
+{
+  "name": "NewYork English",
+  "short_name": "NYE",
+  "description": "천안 불당동의 프리미엄 영어 유치원",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1b523d",
+  "icons": [
+    {
+      "src": "logo/newyork-english-logo-192.webp",
+      "sizes": "192x192",
+      "type": "image/webp"
+    },
+    {
+      "src": "logo/newyork-english-logo-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "logo/newyork-english-logo-512.webp",
+      "sizes": "512x512",
+      "type": "image/webp"
+    },
+    {
+      "src": "logo/newyork-english-logo-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

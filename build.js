@@ -41,7 +41,7 @@ async function build() {
   
   await fs.writeFile('dist/index.html', minifiedHtml);
   
-  // 이미지 파일 복사
+  // 애셋 파일 복사
   console.log('🖼️  Copying assets...');
   const srcDir = 'src';
   const distDir = 'dist';
@@ -51,6 +51,15 @@ async function build() {
     if (file !== 'index.html') {
       await fs.copy(path.join(srcDir, file), path.join(distDir, file));
     }
+  }
+  
+  // logo 폴더가 있는지 확인하고 복사
+  const logoSrcPath = path.join(srcDir, 'logo');
+  const logoDistPath = path.join(distDir, 'logo');
+  
+  if (await fs.pathExists(logoSrcPath)) {
+    await fs.copy(logoSrcPath, logoDistPath);
+    console.log('📁 Logo files copied to dist/logo/');
   }
   
   // 빌드 완료 정보 출력
