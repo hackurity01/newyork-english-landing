@@ -461,10 +461,14 @@
     <script>
       // Event handlers
       function handleLogoClick() {
+        // Track logo click
+        window.va && window.va('track', 'logo_click');
         window.location.href = "/";
       }
 
       function handleNaverBlogClick() {
+        // Track naver blog button click
+        window.va && window.va('track', 'naver_blog_click');
         window.open(
           "https://blog.naver.com/newyorkenglish1",
           "_blank",
@@ -473,6 +477,8 @@
       }
 
       function handleInstagramClick() {
+        // Track instagram button click
+        window.va && window.va('track', 'instagram_click');
         window.open(
           "https://www.instagram.com/new_york_english_cheonan/",
           "_blank",
