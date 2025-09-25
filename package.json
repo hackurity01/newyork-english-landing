@@ -4,10 +4,14 @@
   "description": "New York English Landing Page",
   "main": "src/index.html",
   "scripts": {
-    "start": "http-server src -p 8080 -o"
+    "start": "http-server src -p 8080 -o",
+    "build": "node build.js",
+    "serve:dist": "http-server dist -p 8080 -o"
   },
   "devDependencies": {
-    "http-server": "^14.1.1"
+    "http-server": "^14.1.1",
+    "html-minifier-terser": "^7.2.0",
+    "fs-extra": "^11.2.0"
   },
   "author": "",
   "license": "MIT"
