@@ -1,0 +1,14 @@
+{
+  "name": "newyork-english-landing",
+  "version": "1.0.0",
+  "description": "New York English Landing Page",
+  "main": "src/index.html",
+  "scripts": {
+    "start": "http-server src -p 8080 -o"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  },
+  "author": "",
+  "license": "MIT"
+}

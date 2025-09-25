@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NewYork English 유치원 - 영어로 여는 첫 배움</title>
+    <meta
+      name="description"
+      content="NewYork English 유치원 - 천안 불당동의 프리미엄 영어 유치원" />
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌟</text></svg>" />
+
+    <!-- Apple-like Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet" />
+
+    <style>
+      /* NewYork English Kindergarten Design System - Apple-like Modern Aesthetics */
+
+      :root {
+        /* Brand Colors */
+        --primary: 158 47% 21%; /* #1b523d - Brand primary green */
+        --primary-foreground: 0 0% 100%; /* Pure white */
+        --primary-hover: 158 47% 18%; /* Darker green for hover */
+
+        /* Neutral Colors */
+        --background: 0 0% 100%; /* Pure white */
+        --foreground: 0 0% 13%; /* Near black text */
+        --muted: 0 0% 96%; /* #F5F5F5 - Light gray accent */
+        --muted-foreground: 0 0% 45%; /* Medium gray text */
+
+        /* Semantic Colors */
+        --card: 0 0% 100%;
+        --card-foreground: 0 0% 13%;
+        --border: 0 0% 90%;
+        --ring: 158 47% 21%;
+
+        /* Gradients */
+        --gradient-primary: linear-gradient(
+          135deg,
+          hsl(158 47% 21%),
+          hsl(158 47% 25%)
+        );
+        --gradient-subtle: linear-gradient(
+          180deg,
+          hsl(0 0% 100%),
+          hsl(0 0% 98%)
+        );
+        --gradient-hero: linear-gradient(
+          135deg,
+          hsl(158 47% 21%) 0%,
+          hsl(158 47% 18%) 100%
+        );
+
+        /* Shadows */
+        --shadow-soft: 0 4px 20px rgba(27, 82, 61, 0.12);
+        --shadow-medium: 0 8px 30px rgba(27, 82, 61, 0.15);
+        --shadow-strong: 0 12px 40px rgba(27, 82, 61, 0.2);
+
+        /* Animations */
+        --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        --transition-spring: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+        /* Spacing & Typography */
+        --radius: 12px; /* Rounded corners for Apple-like feel */
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background: hsl(var(--background));
+        color: hsl(var(--foreground));
+        font-family: "Inter", -apple-system, BlinkMacSystemFont,
+          "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      /* Apple-like smooth scrolling */
+      html {
+        scroll-behavior: smooth;
+      }
+
+      /* Remove default button styles */
+      button {
+        outline: none;
+        border: none;
+        cursor: pointer;
+      }
+
+      /* Hero Section Styles */
+      .hero-container {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(
+          135deg,
+          hsl(var(--background)),
+          hsl(var(--muted))
+        );
+      }
+
+      .content-wrapper {
+        max-width: 28rem;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+        text-align: center;
+      }
+
+      /* Logo Animation */
+      .logo-entrance {
+        animation: logoFloat 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275)
+          forwards;
+        background: none;
+        border-radius: var(--radius);
+        transition: var(--transition-smooth);
+      }
+
+      .logo-entrance:focus {
+        box-shadow: 0 0 0 2px hsla(var(--ring), 0.2);
+      }
+
+      .logo-entrance img {
+        width: 8rem;
+        height: 8rem;
+        margin: 0 auto;
+        transition: transform 0.3s ease;
+      }
+
+      .logo-entrance:hover img {
+        transform: scale(1.05);
+      }
+
+      @keyframes logoFloat {
+        0% {
+          opacity: 0;
+          transform: translateY(-20px) scale(0.9);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0) scale(1);
+        }
+      }
+
+      .logo-section {
+        margin-bottom: 2rem;
+      }
+
+      /* Button Styles */
+      .btn-primary {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1.1rem 2rem;
+        border-radius: var(--radius);
+        background: hsl(var(--primary));
+        color: hsl(var(--primary-foreground));
+        font-weight: 500;
+        font-size: 1.125rem;
+        box-shadow: var(--shadow-soft);
+        transition: var(--transition-smooth);
+        text-decoration: none;
+        width: 100%;
+        max-width: 20rem;
+        margin: 0 auto 1rem;
+      }
+
+      .btn-primary:hover {
+        background: hsl(var(--primary-hover));
+        box-shadow: var(--shadow-medium);
+        transform: scale(1.02);
+      }
+
+      .btn-primary:active {
+        transform: scale(0.98);
+      }
+
+      .btn-primary:focus {
+        box-shadow: 0 0 0 2px hsla(var(--ring), 0.2);
+      }
+
+      .btn-primary span {
+        line-height: 1;
+      }
+
+      .btn-primary .icon {
+        margin-left: 0.5rem;
+        width: 1.25rem;
+        height: 1.25rem;
+      }
+
+      /* Text Styles */
+      .hero-title {
+        font-size: 2.5rem;
+        font-weight: 300;
+        letter-spacing: -0.025em;
+        color: hsl(var(--foreground));
+        margin-bottom: 2rem;
+        font-family: "Inter", -apple-system, BlinkMacSystemFont,
+          "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
+      }
+
+      .footer-text {
+        font-size: 0.875rem;
+        color: hsl(var(--muted-foreground));
+        line-height: 1.6;
+      }
+
+      .footer-text a {
+        color: inherit;
+        text-decoration: none;
+        transition: var(--transition-smooth);
+      }
+
+      .footer-text a:hover {
+        color: hsl(var(--primary));
+      }
+
+      /* Button container */
+      .button-container {
+        margin-bottom: 4rem;
+      }
+
+      /* Animations */
+      .fade-in-up {
+        animation: fadeInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+      }
+
+      .fade-in-up-delay-1 {
+        animation: fadeInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.2s forwards;
+        opacity: 0;
+      }
+
+      .fade-in-up-delay-2 {
+        animation: fadeInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.4s forwards;
+        opacity: 0;
+      }
+
+      .fade-in-up-delay-3 {
+        animation: fadeInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.6s forwards;
+        opacity: 0;
+      }
+
+      @keyframes fadeInUp {
+        0% {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Mobile optimizations */
+      @media (max-width: 768px) {
+        .hero-title {
+          font-size: 2rem;
+        }
+
+        .btn-primary {
+          padding: 0.75rem 1.5rem;
+          font-size: 1rem;
+          max-width: 18rem;
+        }
+
+        .content-wrapper {
+          padding: 0 1rem;
+        }
+
+        .logo-entrance img {
+          width: 7rem;
+          height: 7rem;
+        }
+      }
+
+      @media (min-width: 768px) {
+        .hero-title {
+          font-size: 3rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="hero-container">
+      <div class="content-wrapper">
+        <!-- Logo Section -->
+        <div class="logo-section">
+          <button
+            class="logo-entrance"
+            onclick="handleLogoClick()"
+            aria-label="NewYork English 유치원 홈으로 이동">
+            <img
+              src="newyork-english-logo.png"
+              alt="NewYork English 유치원 로고" />
+          </button>
+        </div>
+
+        <!-- Hero Title -->
+        <h1 class="hero-title fade-in-up-delay-1">영어로 여는 첫 배움</h1>
+
+        <!-- Action Buttons -->
+        <div class="button-container">
+          <button
+            onclick="handleNaverBlogClick()"
+            class="btn-primary fade-in-up-delay-2"
+            aria-label="네이버 블로그 새 탭에서 열기">
+            <span>네이버 블로그</span>
+            <svg
+              class="icon"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round">
+              <path
+                d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+              <polyline points="15,3 21,3 21,9" />
+              <line x1="10" y1="14" x2="21" y2="3" />
+            </svg>
+          </button>
+
+          <button
+            onclick="handleInstagramClick()"
+            class="btn-primary fade-in-up-delay-3"
+            aria-label="인스타그램 새 탭에서 열기">
+            <span>인스타그램</span>
+            <svg
+              class="icon"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round">
+              <path
+                d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+              <polyline points="15,3 21,3 21,9" />
+              <line x1="10" y1="14" x2="21" y2="3" />
+            </svg>
+          </button>
+        </div>
+
+        <!-- Footer -->
+        <footer class="fade-in-up-delay-3">
+          <address class="footer-text" style="font-style: normal">
+            <div style="margin-bottom: 0.25rem">
+              충남 천안시 서북구 불당34길 3-12 2층
+            </div>
+            <div>
+              <a href="tel:0507-1442-0061" aria-label="전화걸기">
+                0507-1442-0061
+              </a>
+            </div>
+          </address>
+        </footer>
+      </div>
+    </main>
+
+    <script>
+      // Event handlers
+      function handleLogoClick() {
+        window.location.href = "/";
+      }
+
+      function handleNaverBlogClick() {
+        window.open(
+          "https://blog.naver.com/newyorkenglish1",
+          "_blank",
+          "noopener,noreferrer"
+        );
+      }
+
+      function handleInstagramClick() {
+        window.open(
+          "https://www.instagram.com/new_york_english_cheonan/",
+          "_blank",
+          "noopener,noreferrer"
+        );
+      }
+
+      // Add subtle page load animation
+      document.addEventListener("DOMContentLoaded", function () {
+        document.body.style.opacity = "0";
+        document.body.style.transition = "opacity 0.5s ease-in-out";
+
+        setTimeout(function () {
+          document.body.style.opacity = "1";
+        }, 100);
+      });
+    </script>
+  </body>
+</html>
