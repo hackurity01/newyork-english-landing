@@ -48,13 +48,6 @@
     <!-- Web App Manifest -->
     <link rel="manifest" href="manifest.json" />
 
-    <!-- Apple-like Typography -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap"
-      rel="stylesheet" />
-
     <script>
       window.va =
         window.va ||
@@ -123,10 +116,8 @@
       body {
         background: hsl(var(--background));
         color: hsl(var(--foreground));
-        font-family: "Inter", -apple-system, BlinkMacSystemFont,
-          "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
+        font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display",
+          "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
       }
 
       /* Apple-like smooth scrolling */
@@ -147,11 +138,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        background: linear-gradient(
-          135deg,
-          hsl(var(--background)),
-          hsl(var(--muted))
-        );
+        background: #fbfbfb;
       }
 
       .content-wrapper {
@@ -245,13 +232,13 @@
 
       /* Text Styles */
       .hero-title {
-        font-size: 2.5rem;
+        font-size: 2rem;
         font-weight: 300;
         letter-spacing: -0.025em;
         color: hsl(var(--foreground));
         margin-bottom: 2rem;
-        font-family: "Inter", -apple-system, BlinkMacSystemFont,
-          "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
+        font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display",
+          "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
       }
 
       .footer-text {
@@ -344,9 +331,12 @@
             class="logo-entrance"
             onclick="handleLogoClick()"
             aria-label="NewYork English 유치원 홈으로 이동">
-            <img
-              src="logo/newyork-english-logo.png"
-              alt="NewYork English 유치원 로고" />
+            <picture>
+              <source srcset="logo/newyork-english-logo-512.webp" type="image/webp">
+              <img
+                src="logo/newyork-english-logo-512.png"
+                alt="NewYork English 유치원 로고" />
+            </picture>
           </button>
         </div>
 
@@ -388,10 +378,20 @@
             onclick="handleInstagramClick()"
             class="btn-primary fade-in-up-delay-3"
             aria-label="인스타그램 새 탭에서 열기">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 8px;">
-              <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
-              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
-              <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="white"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              style="margin-right: 8px">
+              <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+              <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
             </svg>
             <span>인스타그램</span>
           </button>
@@ -462,13 +462,13 @@
       // Event handlers
       function handleLogoClick() {
         // Track logo click
-        window.va && window.va('track', 'logo_click');
+        window.va && window.va("track", "logo_click");
         window.location.href = "/";
       }
 
       function handleNaverBlogClick() {
         // Track naver blog button click
-        window.va && window.va('track', 'naver_blog_click');
+        window.va && window.va("track", "naver_blog_click");
         window.open(
           "https://blog.naver.com/newyorkenglish1",
           "_blank",
@@ -478,7 +478,7 @@
 
       function handleInstagramClick() {
         // Track instagram button click
-        window.va && window.va('track', 'instagram_click');
+        window.va && window.va("track", "instagram_click");
         window.open(
           "https://www.instagram.com/new_york_english_cheonan/",
           "_blank",
